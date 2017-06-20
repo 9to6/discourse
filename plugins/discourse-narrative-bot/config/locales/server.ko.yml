@@ -27,28 +27,58 @@ ko:
       trigger: "굴리기"
       invalid: |-
         죄송합니다. 수학적으로 해당 주사위는 돌릴 수 없습니다. :confounded:
+      not_enough_dice: |-
+        저는 오직  %{num_of_dice}개의 주사위만을 가지고 있습니다. [Shameful](http://www.therobotsvoice.com/2009/04/the_10_most_shameful_rpg_dice.php), 알아요.! 
+      out_of_range: |-
+        당신은 수학적으로 페어한 주사위 면의 [최대 수](https://www.wired.com/2016/05/mathematical-challenge-of-designing-the-worlds-most-complex-120-sided-dice) 가 120인걸 아시나요?
+      results: |-
+        > :game_die: %{results}
+
     quote:
       trigger: "인용"
       '1':
-        quote: "모든 고난의 사이에는 기회가 존재합니다"
+        quote: "모든 고난의 사이에는 기회가 존재합니다."
         author: "앨버트 아인슈타인"
       '2':
+        quote: "세상에서 보기를 바라는 변화, 스스로 그 변화가 되어야 한다."
         author: "마하트마 간디"
       '3':
         quote: "이미 끝났으니까 더 이상 울지 말고, 웃으세요."
+        author: "닥터 수스"
+      '4':
+        quote: "만약 당신이 옳은 일을 하고 싶거든, 직접 하세요."
+        author: "샤를 에두아르 기욤"
+      '5':
+        quote: "할 수 있다고 믿어라. 그럼 반은 성공한 것이다."
+        author: "시어도어 루즈벨트"
+      '6':
+        quote: "인생은 초콜릿 상자와 같은거야. 네가 무엇을 얻을지 절대 모르거든."
+        author: "포레스트 검프 어머니"
+      '7':
+        quote: "그것은 인간을 위한 작은 발걸음, 인류를 위한 거대한 도약입니다."
+        author: "닐 암스트롱"
       '8':
-        quote: "하루에 한번 하기 두려운 것을 하세요."
+        quote: "당신이 두려워 하는 일을 매일 하라."
+        author: "엘리노어 루즈벨트"
       '9':
         quote: "실수는 언제나 용서될 수 있습니다. 실수를 인정할 수 있는 용기가 있다면 말이죠."
         author: "이소룡"
+      '10':
+        quote: "사람의 마음이 만들어 낼 수 있고 믿을 수 있는 거라면 그것은 달성할 수 있다."
+        author: "나폴레옹 힐"
     magic_8_ball:
       answers:
+        '1': "그건 확실해"
+        '2': "그건 분명히 그래"
         '3': "의심 없이"
         '4': "당연합니다"
-        '5': "확실합니다"
+        '5': "그래 명확해"
         '6': "내가 보기에는 그렇습니다"
         '7': "가장 그럴 듯 합니다"
+        '8': "좋은 전망"
         '9': "예"
+        '10': "'yes'라는 신호"
+        '11': "모호해, 다시 시도해줘요"
         '12': "나중에 다시 물어봐주세요"
         '13': "다음에 알려드리는 게 좋을 것 같네요"
         '14': "지금은 예측할 수 없습니다"
@@ -56,24 +86,34 @@ ko:
         '16': "믿지 마세요"
         '17': "내 답은 아닙니다"
         '18': "내 소스는 아니라고 하네요"
+        '19': "전망이 매우 좋지 않네요"
         '20': "의심스럽습니다"
     track_selector:
       reset_trigger: '시작'
       skip_trigger: '건너뛰기'
       help_trigger: '도움말 표시'
+      
       random_mention:
         reply: |-
           내가 할 수 있는 일을 알고 싶다면 `@%{discobot_username} %{help_trigger}` 를 말하세요.
       do_not_understand:
+        first_response: |-
+          안녕. 답장 고마워요!
+
+          유감스럽게도 제대로 프로그래밍되지 않은 봇이기에, 난 그걸 대부분 이해할 수가 없네요. :frowning:
         second_response: |-
           죄송해요. 아직도 이해를 못 하겠어요. :anguished:
 
           혹시 실제 사람에게 문의를 하고 싶으시다면 [저희의 문의 페이지](/about) 를 참고하세요.
 
           그 동안 저는 물러나 있겠습니다.
+
     new_user_narrative:
-      reset_trigger: "새로운 유저"
+      reset_trigger: "신규 유저"
+      cert_title: "새 사용자 튜토리얼을 성공적으로 완료한 것을 인정하며"
+
       hello:
+        title: ":robot: 안녕하세요!"
         message: |-
           %{title}에 가입하신 것을 감사하며 환영합니다!
 
